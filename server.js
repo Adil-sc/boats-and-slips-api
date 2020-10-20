@@ -8,8 +8,6 @@ const bodyParser = require('body-parser')
 
 app.use(bodyParser.json())
 
-// app.use('/lodgings', router)
-// app.use('/lodgings', lodgingRoutes)
 app.use('/boats', boatRoutes.router)
 app.use('/slips', slipRoutes.router)
 
