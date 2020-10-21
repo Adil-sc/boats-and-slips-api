@@ -3,6 +3,7 @@ const boatRoutes = require('./Routes/boatRoutes')
 const slipRoutes = require('./Routes/slipRoutes')
 
 const app = express()
+app.enable('trust proxy')
 
 const bodyParser = require('body-parser')
 

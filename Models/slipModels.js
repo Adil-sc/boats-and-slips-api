@@ -46,7 +46,6 @@ add_boat_to_slip = (boat, slip, boat_id, slip_id) => {
 
 depart_boat_from_slip = (boat, slip, slip_id) => {
   const key = datastore.key([SLIPS, parseInt(slip_id, 10)])
-
   slip[0].current_boat = null
   return datastore.save({ key: key, data: slip[0] })
 }

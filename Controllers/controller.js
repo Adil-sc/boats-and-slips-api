@@ -2,6 +2,8 @@ const { get_boats, get_boat } = require('../Models/boatModels')
 const boatModel = require('../Models/boatModels')
 const slipModel = require('../Models/slipModels')
 
+/* ------------- Begin Controller Functions ------------- */
+
 exports.getBoats = async (req, res) => {
   let boats = await boatModel.get_boats()
   const appURL = `${req.protocol}://${req.get('host')}${req.originalUrl}`
@@ -278,3 +280,5 @@ exports.addBoatToSlip = async (req, res) => {
     // console.log('Error adding boat to slip: ', e)
   }
 }
+
+/* ------------- End Controller Functions ------------- */
